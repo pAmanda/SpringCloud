@@ -14,10 +14,12 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://192.168.7.54:9001/eureka
-    eurekaServerReadTimeoutSeconds: 15
     registryFetchIntervalSeconds: 2
     instanceInfoReplicationIntervalSeconds: 2
     initialInstanceInfoReplicationIntervalSeconds: 3
+    #Indica que o cliente deve forçar o registro durante a inicialização
+    shouldEnforceRegistrationAtInit: true
+
 
 server:
   port: 8001
