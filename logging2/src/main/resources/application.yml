@@ -1,0 +1,24 @@
+spring:
+  cloud:
+      client:
+        hostname: www.globo.com.br
+        port: 7845
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    appname: ABC-SERVICE-2
+  client:   
+    healthcheck:
+      enabled: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.7.54:9001/eureka
+    eurekaServerReadTimeoutSeconds: 15
+    registryFetchIntervalSeconds: 2
+    instanceInfoReplicationIntervalSeconds: 2
+    initialInstanceInfoReplicationIntervalSeconds: 3
+
+server:
+  port: 8001
+
