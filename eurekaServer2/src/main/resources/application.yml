@@ -16,7 +16,6 @@ eureka:
     #Se não for trafegada por requisições seguras
     securePortEnabled: false
   client:
-    eurekaServerReadTimeoutSeconds: 40
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:

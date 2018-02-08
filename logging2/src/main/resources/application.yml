@@ -1,25 +1,24 @@
 spring:
-  cloud:
-      client:
-        hostname: www.globo.com.br
-        port: 7845
+  application:
+    name: MICROSERVICE
 
 eureka:
   instance:
+    instanceId: SERVICE 2
     leaseRenewalIntervalInSeconds: 1
-    appname: ABC-SERVICE-2
+    statusPageUrl: http://www.globo.com.br
   client:   
     healthcheck:
       enabled: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://192.168.7.54:9001/eureka
-    registryFetchIntervalSeconds: 2
-    instanceInfoReplicationIntervalSeconds: 2
-    initialInstanceInfoReplicationIntervalSeconds: 3
+      defaultZone: http://192.168.7.54:9002/eureka
+    registryFetchIntervalSeconds: 1
+    instanceInfoReplicationIntervalSeconds: 1
+    initialInstanceInfoReplicationIntervalSeconds: 1
     #Indica que o cliente deve forçar o registro durante a inicialização
     shouldEnforceRegistrationAtInit: true
-
+    eurekaServerReadTimeoutSeconds: 10
 
 server:
   port: 8001
